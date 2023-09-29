@@ -9,11 +9,6 @@ spring:
   rabbitmq:
     addresses: amqps://user:password@shrimp.rmq.cloudamqp.com/gzptufek
     queue: softwareHouse.queue
-#  rabbitmq:
-#    host: shrimp.rmq.cloudamqp.com
-#    port: 5672
-#    username: gzptufek
-#    password: KyF3Nza05dD7weDpskEQVU5sIIq-huHe
 
 # Configuracao da porta do serviço de forma aleatoria
 server:
