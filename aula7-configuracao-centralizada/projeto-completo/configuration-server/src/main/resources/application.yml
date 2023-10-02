@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/CamiloJr/config-repo # para repositorio publico
+#          username: (github username)
+#          password: (github senha) ou (github access-token)
+
+server:
+  port: 8888
