@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: push-notify
+server:
+  port: 8080
+
+firebase:
+  credential-file-name: firebase-account.json

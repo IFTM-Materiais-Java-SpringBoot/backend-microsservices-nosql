@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "a4b77e5f-795a-4d19-880b-e6f4dbda5df3",
+		"name": "notifications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7132654"
+	},
+	"item": [
+		{
+			"name": "SendNotification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipientToken\": \"............\",\r\n    \"title\": \"Testando a aplicação!\",\r\n    \"body\": \"Isso aqui é uma Push Notification!\",\r\n    \"image\": \"https://mimi-panda.com/wp-content/uploads/2023/02/marguerite-729510_640.jpg\",\r\n    \"data\": {\r\n        \"key1\": \"Value 1\",\r\n        \"key2\": \"Value 1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
