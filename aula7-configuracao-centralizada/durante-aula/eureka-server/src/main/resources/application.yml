@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: dev
+  config:
+      import: optional:configserver:http://localhost:8888
+
+# caso algum problema no acesso ao servidor de config
+# a configuracao abaixo sera aplicada
+
+server:
+  port: 8761
+# Definir para que o servidor não se registra em um servidor eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false # Definir para que o servidor não busque registros do eureka

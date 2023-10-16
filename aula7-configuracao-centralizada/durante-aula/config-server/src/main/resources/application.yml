@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main #ou master ou qualquer uma
+          uri: https://github.com/CamiloJr/software-house-config-repo
+          #user: uname
+          #password: xyz
+server:
+  port: 8888
