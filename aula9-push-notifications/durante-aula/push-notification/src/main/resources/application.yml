@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: push-notification-service
+server:
+  port: 8080
+
+# Variáveis de Amb. Customizadas
+firebase:
+  credential-file-name: firebase-account.json
