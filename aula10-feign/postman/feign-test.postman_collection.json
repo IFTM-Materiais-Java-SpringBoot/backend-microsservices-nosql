@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "333834eb-f7aa-49f4-a215-82b6732e8f6b",
+		"name": "feign-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7132654"
+	},
+	"item": [
+		{
+			"name": "producer",
+			"item": [
+				{
+					"name": "GetResponse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/producer/api/response",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"producer",
+								"api",
+								"response"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/producer/api/response",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"producer",
+										"api",
+										"response"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Oct 2023 18:49:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Open Feign Test\",\n    \"message\": \"The [producer:851ab71a200e7608d60728a0581a0576] generated a message and send to you!\",\n    \"date\": \"2023-10-23T18:49:03.360+00:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "consumer",
+			"item": [
+				{
+					"name": "GetMasterMessage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/consumer/api/pull",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"consumer",
+								"api",
+								"pull"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GetResponse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/consumer/api/pull",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"consumer",
+										"api",
+										"pull"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "transfer-encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Oct 2023 18:49:34 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"masterTitle\": \"Master Message of [consumer:db636d1a35c57d1cc13a9f18529f7aa5].\",\n    \"masterDate\": \"2023-10-23T18:49:34.220+00:00\",\n    \"responseDTO\": {\n        \"title\": \"Open Feign Test\",\n        \"message\": \"The [producer:851ab71a200e7608d60728a0581a0576] generated a message and send to you!\",\n        \"date\": \"2023-10-23T18:49:34.219+00:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "TaFunfando",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/consumer/api/funfando",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"consumer",
+								"api",
+								"funfando"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/consumer/api/funfando",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"consumer",
+										"api",
+										"funfando"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Oct 2023 18:54:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "Tá funfando tranquilamente!"
+						}
+					]
+				}
+			]
+		}
+	]
+}
