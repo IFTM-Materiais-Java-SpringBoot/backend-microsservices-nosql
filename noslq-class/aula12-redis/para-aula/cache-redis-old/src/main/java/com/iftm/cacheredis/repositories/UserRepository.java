@@ -1,0 +1,11 @@
+package com.iftm.cacheredis.repositories;
+
+import com.iftm.cacheredis.models.User;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public interface UserRepository extends MongoRepository<User, String> {
+}

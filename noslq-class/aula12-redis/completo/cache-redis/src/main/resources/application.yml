@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      port: 27017
+      host: localhost
+      database: myDataBase
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+    serializer: org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer
+
+# Mostrar Queries MongoDB no Terminal:
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
