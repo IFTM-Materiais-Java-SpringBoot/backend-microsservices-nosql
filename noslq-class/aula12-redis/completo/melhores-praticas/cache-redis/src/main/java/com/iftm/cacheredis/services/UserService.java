@@ -4,7 +4,6 @@ import com.iftm.cacheredis.models.User;
 import com.iftm.cacheredis.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -16,16 +15,16 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-    @Cacheable(value = "user")
+    @Cacheable("user")
     public List<User> findAll() {
         var users = repository.findAll();
-        System.out.println("Resposta do Banco de Dados...");
+        System.out.println("Resposta sem cache...");
         return users;
     }
 
     @Cacheable(value = "user", key = "#id")
     public User findById(String id) {
-        System.out.println("Resposta do Banco de Dados...");
+        System.out.println("Resposta sem cache...");
         return repository.findById(id).get();
     }
 

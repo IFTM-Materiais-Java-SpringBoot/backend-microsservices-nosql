@@ -1,15 +1,14 @@
 spring:
+  application:
+    name: spring-security-exemple
   data:
     mongodb:
       port: 27017
       host: localhost
-      database: myDataBase
-  cache:
-    type: redis
-  redis:
-    host: localhost
-    port: 6379
-    serializer: org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer
+      database: mydb
+
+server:
+  port: 8080
 
 # Mostrar Queries MongoDB no Terminal:
 logging:

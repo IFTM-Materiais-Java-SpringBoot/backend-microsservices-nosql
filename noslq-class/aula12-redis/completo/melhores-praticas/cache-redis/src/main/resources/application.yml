@@ -10,6 +10,13 @@ spring:
     host: localhost
     port: 6379
     serializer: org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer
+    jedis:
+      pool:
+        max-active: 50
+        max-idle: 30
+        min-idle: 10
+        max-wait: 2000
+
 
 # Mostrar Queries MongoDB no Terminal:
 logging:
